@@ -34,8 +34,8 @@ class Card(object):
             game_context = SUPPORTED_GAMES[0]
         try:
             assert game_context in SUPPORTED_GAMES
-        except AssertionError as err:
-            err.message = "Sorry, %s is not yet supported!" % game_context
+        except AssertionError:
+            print "Sorry, %s is not yet supported!\n" % game_context
             raise
 
         games = {'blackjack': {'J': 10,
@@ -93,7 +93,3 @@ class LiteDeckOfCards:
 
     def __repr__(self):
         return "Deck Of Cards for %s" % self.game
-
-
-class SingleLiteDeckOfCards(LiteDeckOfCards):
-    __metaclass__ = Singleton
