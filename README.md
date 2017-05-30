@@ -1,2 +1,2 @@
 # playingcards
-Python classes for playing carda
+Python classes for playing cards
